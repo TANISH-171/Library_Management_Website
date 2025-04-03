@@ -1,62 +1,99 @@
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url('bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
+  transition: background 1s ease-in-out;
 }
 
 .container {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  margin: 100px auto;
   max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
 }
 
 form, #search {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  flex-direction: column;
 }
 
 input, button {
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 input {
-  flex: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #0ff;
 }
 
 button {
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
+  background-color: #0ff;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 10px #0ff;
+}
+
+button:hover {
+  background-color: #00e6e6;
+  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
+  transform: scale(1.05);
 }
 
 .logout {
-  float: right;
-  background-color: #ff4d4d;
+  display: block;
+  background-color: #ff1a75;
   color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: -50px;
+  padding: 10px 16px;
+  margin: 0 auto 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ff1a75;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.logout:hover {
+  background-color: #ff4da6;
+  box-shadow: 0 0 20px #ff1a75, 0 0 30px #ff1a75;
+  transform: scale(1.05);
 }
 
 #book-list li {
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 5px 0;
-  border-radius: 6px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 6px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#book-list li:hover {
+  transform: scale(1.02);
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 10px #0ff;
 }
